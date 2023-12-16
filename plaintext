@@ -1,0 +1,26 @@
+health-monitoring-app
+|-- src
+|   |-- com
+|       |-- keyin
+|           |-- client
+|               |-- HealthMonitoringApp.java
+|               |-- DatabaseConnection.java
+|               |-- UserDao.java
+|               |-- UserDaoExample.java
+|               |-- User.java
+|               |-- Doctor.java
+|               |-- HealthData.java
+|               |-- HealthDataDao.java
+|               |-- MedicineReminder.java
+|               |-- MedicineReminderManager.java
+|               |-- RecommendationSystem.java
+|-- doc
+|   |-- UserDocumentation.docx
+|   |-- DevelopmentDocumentation.docx
+|   |-- DeploymentDocumentation.docx
+|-- lib
+|   |-- jbcrypt-0.4.jar
+|-- test
+|   |-- HealthMonitoringAppTest.java
+|-- README.md
+|-- .gitignore
