@@ -1,42 +1,73 @@
-import java.util.ArrayList;
+import java.util.Array;
 import java.util.List;
 
-/**
- * In this basic version of the
- * RecommendationSystem class, complete the generateRecommendations to take a
- * HealthData object as input and generates recommendations based on the user's heart rate and step count.
- * You can also expand this class to include more health data analysis and generate more specific
- * recommendations based on the user's unique health profile
- * NOTE:
- * To integrate this class into your application, you'll need to pass the HealthData object to the generateRecommendations method
- * and store the generated recommendations in the recommendations table in the database.
- */
+public class HealthMonitoring {
 
-public class RecommendationSystem {
-    private static final int MIN_HEART_RATE = 60;
-    private static final int MAX_HEART_RATE = 100;
-    private static final int MIN_STEPS = 10000;
+    public static void main(String[] args) {
+    //HealthData example
+    HealthData healthData = new HealthData(heartRate:70, 8000);
 
-    public List<String> generateRecommendations(HealthData healthData) {
-        List<String> recommendations = new ArrayList<>();
+    //RecommendationSystem instance create
+    RecommendationSystem recommendationSystem = new RecommendationSystem();
 
-//        // Analyze heart rate
-        int heartRate = healthData.getHeartRate();
-        if (heartRate < MIN_HEART_RATE) {
-            recommendations.add("Your heart rate is lower than the recommended range. " +
-                    "Consider increasing your physical activity to improve your cardiovascular health.");
+    //Recommendations
+    List<String> recommedationSystem.generatRecommedations(healthData);
+
+    //Recommedations printed
+    if (recommedations.isEmpty()) {
+        System.out.println(x:"No recommedations at this time");
+    }else{
+        System.out.println(x:"Recommedations as follows");
+        for (String recommedation : recommendations) {
+            System.out.println("-" + recommedation);
         }
-//
-//
-//        // Analyze steps
-        int steps = healthData.getSteps();
-        if (steps < MIN_STEPS) {
-            recommendations.add("You're not reaching the recommended daily step count. " +
-                    "Try to incorporate more walking or other physical activities into your daily routine.");
-        }
-//
-//        // Add more health data analysis and recommendations as needed
-
-        return recommendations;
     }
 }
+
+private static class HealthData {
+    private int heartRate;
+    private int steps;
+}
+
+    public HealthData(int hearthRate, int steps) {
+        this.heartRate = hearthRate;
+        this.steps = steps;
+    }
+
+    public int getHeartRate() {
+        return heartRate;
+    }
+
+    public int getSteps() {
+        return steps;
+}
+
+private static class RecommendationSystem {
+    private static final int MIN_HEART_RATE = 60;
+    private static final int MAX_HEART_RATE = 100;
+    private static final int MIN_STEPS = 10000
+    private static final int MAX_STEPS = 25000
+
+    public List<String> generateRecommendation(HealthData healthData) {
+        List<String> recommendations = new ArrrayList<>();
+        //Analyze heart rate
+        int heartRate = healthData.getHeartRate();
+        if (heartRate < MIN_HEART_RATE) {
+            recommendation.add("Your heart rate is lower than recommended range. " + "Please increase your steps to improve your cardiovascular health!!");
+        } else if (heartRate > MAX_HEART_RATE) { 
+             recommendations.add("Your heart rate is higher than the recommended range. " + " Please consult with your Health Care provider to ensure a properly working heart . ");
+    }
+
+    //Step analyzing
+    int steps = healthData.getSteps();
+    if (steps < MIN_STEPS) {
+        recommendations.add("You're not reaching the daily recommended number of steps. " + " please increase the number of daily steps or try other activities along with your waling. ";
+} else if(Step > MAX_STEPS) {
+        recommendations.add("Your steps are above recommended range. " + "please decrease by 5,000 steps to a safer level. ");
+    }
+        return recommendations;
+
+    
+                               
+        
+
