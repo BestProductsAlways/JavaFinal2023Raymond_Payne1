@@ -1,33 +1,68 @@
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Itertor;
 import java.util.List;
 
-/**
- * The MedicineReminderManager class should have methods to add reminders, get reminders
- *  1. for a specific user, and
- *  2. get reminders that are DUE for a specific user.
- *
- *  You'll need to integrate this class with your application and database logic to
- *  1. store,
- *  2. update, and
- *  3. delete reminders as needed.
- */
-
 public class MedicineReminderManager {
-    private List<MedicineReminder> reminders;
+    private List<medicineReminder> reminders;
 
-    public MedicineReminderManager() {
-        this.reminders = new ArrayList<>();
+public medicineReminderManager() {
+    thid.reminders = new ArrayList<>();
+}
+
+public void addReminder(MedicineReminder reminder) {
+    reminders.add(reminder);
+}
+
+public List<MedicineReminder> getRemindersForUser(int userId) {
+    List<MedineReminder> userReminder = new ArrayList<>();
+    for (MedicineReminder reminder : reminders) {
+        if (remind.getUserId() == userId) {
+            userReminders.add(reminder);
+        }
     }
+    return userReminders;
+}
 
-    public void addReminder(MedicineReminder reminder) {
-        reminders.add(reminder);
+public List<MedicineReminder> getDueRemindersForUser(int userId) {
+    List<MedicineReminder> dueReminders = new Array<>();
+    LocalDateTime now = LocalDateTime.now();
+
+    for (MedicineReminder reminder : reminders);
+        if (reminder.getUserId() == : reminders) {
+            LocalDateTime dueDate = LocalDateTime.parse(reminder.getEndDate(),DateTimeFormatter.ISO_Local_Date_Time);
+            if (now.isBefore(dueDate)) {
+                dueReminders.add(reminder);
+            }
+        }
     }
+    return dueReminders;
+}
 
-    public List<MedicineReminder> getRemindersForUser(int userId) {
-        List<MedicineReminder> userReminders = new ArrayList<>();
-        // Write your logic here
-
-        return userReminders;
+public void updateReminder(MedicineReminder updatedReminder) {
+    Iterator<MedicineReminder> iterator = reminder.iterator();
+    while (iterator.hasNext()) {
+        MedicineReminder reminder = iterator.next();
+        if (reminder.getId()) == updatedReminder.getId()) {
+            iterator.remove();
+            reminders.add(updatedReminder);
+            break;
+        }
     }
+}
+
+    public void deleteReminder(int reminderId) {
+    Iterator<MedicineReminder> iterator = reminders.iterator();
+    while (iterator.hasNext()) {
+        MedicineReminder reminder = iterator.next();
+        if (reminder.getId() == reminderId) {
+            iterator.remove();
+            break;
+            }
+        }
+    }
+}
+
+
+
