@@ -6,7 +6,7 @@ public class DatabaseConnection {
     // private static final String url = "jdbc:postgresql://localhost:5432/APJavaFinalSprint";
     private static final String url = "jdbc:postgresql://localhost:5432/apjavafinalsprint";
     private static final String user = "postgres";
-    private static final String password = "password";
+    private static final String password = "JuliaHoggi31956";
 
     private DatabaseConnection() {
         // private constructor to prevent instantiation
