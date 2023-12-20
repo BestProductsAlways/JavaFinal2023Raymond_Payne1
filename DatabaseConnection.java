@@ -3,8 +3,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
-    // private static final String url = "jdbc:postgresql://localhost:5432/APJavaFinal2023Raymond_Payne1";
-    private static final String url = "jdbc:postgresql://localhost:5432/apjavafinal2023raymond_payne1";
+    // private static final String url = "jdbc:postgresql://localhost:5432/APHealthMonitoringApp";
+    private static final String url = "jdbc:postgresql://localhost:5432/aphealthmonitoringapp";
     private static final String user = "postgres";
     private static final String password = "JuliaHoggi31956";
 
