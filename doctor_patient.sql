@@ -1,10 +1,7 @@
-CREATE TABLE medicine_reminders (
-    id SERIAL PRIMARY KEY,
+CREATE TABLE recommendations (
+     id SERIAL PRIMARY KEY,
     user_id INT NOT NULL,
-    medicine_name VARCHAR(100) NOT NULL,
-    dosage VARCHAR(50) NOT NULL,
-    schedule VARCHAR(100) NOT NULL,
-    start_date DATE NOT NULL,
-    end_date DATE NOT NULL,
+    recommendation_text TEXT NOT NULL,
+    date DATE NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id)
 )
