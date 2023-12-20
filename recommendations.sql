@@ -1,10 +1,7 @@
-CREATE TABLE health_data (
-    id SERIAL PRIMARY KEY,
+CREATE TABLE recommendations (
+     id SERIAL PRIMARY KEY,
     user_id INT NOT NULL,
-    weight DECIMAL(5,2) NOT NULL,
-    height DECIMAL(5,2) NOT NULL,
-    steps INT NOT NULL,
-    heart_rate INT NOT NULL,
+    recommendation_text TEXT NOT NULL,
     date DATE NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id)
 )
