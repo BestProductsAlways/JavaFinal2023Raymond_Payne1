@@ -8,7 +8,7 @@ public class UserDaoExample {
         String hashedPassword = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
 
         // Prepare the SQL query
-        String query = "INSERT INTO users (first_name, last_name, email, password, is_doctor) " +
+        String query = "INSERT INTO users (first_name, last_name, email, password, is_doctor, specialty) " +
                 "VALUES (?, ?, ?, ?, ?)";
 
         // Database logic to insert data using PREPARED Statement
