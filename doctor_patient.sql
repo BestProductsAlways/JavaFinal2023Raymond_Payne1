@@ -1,7 +1,8 @@
-CREATE TABLE recommendations (
-     id SERIAL PRIMARY KEY,
-    user_id INT NOT NULL,
-    recommendation_text TEXT NOT NULL,
-    date DATE NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES users(id)
+CREATE TABLE doctor_patient (
+    doctor_id INT NOT NULL,
+    patient_id INT NOT NULL,
+    PRIMARY KEY (doctor_id, patient_id),
+    FOREIGN KEY (doctor_id) REFERENCES users(id),
+    FOREIGN KEY (patient_id) REFERENCES users(id)
 )
+
